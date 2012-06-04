@@ -15,6 +15,12 @@ class Site(models.Model):
   def __unicode__(self):
     return self.domain
 
+  def save(self, *args, **kwargs):
+      print "saving something here"
+      print self.domain
+      super(Site, self).save(*args, **kwargs)
+      
+
 class Page(models.Model):
     class Meta:
         verbose_name = "Pages"

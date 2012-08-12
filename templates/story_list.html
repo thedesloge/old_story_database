@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content%}
+    {{site_name}}
+        <h2>Stories</h2>
+        <ul>
+            {% for story in object_list%}
+                <li>{{ story.internal_id }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Video Stories</h2>
+        <ul>
+            {% for video_story in video_story_list%}
+                <li>{{ video_story.internal_id }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Photo Stories</h2>
+        <ul>
+            {% for photo_story in photo_story_list%}
+                <li>{{ photo_story.internal_id }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Infographic Stories</h2>
+        <ul>
+            {% for infographic_story in infographic_story_list%}
+                <li>{{ infographic_story.internal_id }}</li>
+            {% endfor %}
+        </ul>
+{% endblock %}

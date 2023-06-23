@@ -10,3 +10,11 @@ Required Django App Dependencies
 
 - Django Tastypie
 	https://github.com/toastdriven/django-tastypie
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
